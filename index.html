@@ -480,6 +480,76 @@
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* FAQ */
+  .faq { background: #fff; }
+  .faq .section-label { background: #FFF8E8; color: #CC8800; }
+
+  .faq-list { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+
+  .faq-item {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 2px solid #EEE;
+    background: #FAFAFA;
+    transition: border-color 0.2s;
+  }
+  .faq-item:hover { border-color: var(--yellow); }
+
+  .faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    transition: background 0.15s;
+  }
+  .faq-q:hover { background: #FFF8E8; }
+  .faq-q span:nth-child(2) { flex: 1; }
+
+  .faq-icon {
+    width: 32px; height: 32px;
+    border-radius: 10px;
+    background: var(--yellow);
+    color: var(--dark);
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .faq-icon.a { background: linear-gradient(135deg, var(--cyan), var(--purple)); color: #fff; }
+
+  .faq-arrow {
+    font-size: 0.75rem;
+    color: #AAA;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+  .faq-a {
+    display: none;
+    gap: 14px;
+    padding: 0 24px 20px;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.8;
+    border-top: 1px dashed #EEE;
+    padding-top: 16px;
+  }
+  .faq-item.open .faq-a { display: flex; }
+
 </style>
 </head>
 <body>
@@ -561,6 +631,78 @@
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title reveal">よくあるご質問</h2>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-icon">Q</span>
+          <span>参加費はかかりますか？</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <span class="faq-icon a">A</span>
+          <span>無料でご参加いただけます。お気軽にどうぞ！</span>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-icon">Q</span>
+          <span>初心者でも参加できますか？</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <span class="faq-icon a">A</span>
+          <span>もちろんです！生成AIを「知る」から「使う」へをコンセプトにした入門向けイベントです。専門知識は一切不要です。</span>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-icon">Q</span>
+          <span>パソコンやスマホは持参が必要ですか？</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <span class="faq-icon a">A</span>
+          <span>パソコン・スマホをご持参ください。体験型のワークで実際に操作していただきます。</span>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-icon">Q</span>
+          <span>駐車場はありますか？</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <span class="faq-icon a">A</span>
+          <span>会場に専用駐車場はございません。公共交通機関をご利用いただくか、近隣のコインパーキングをご利用ください。</span>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-icon">Q</span>
+          <span>青年会議所のメンバーでなくても参加できますか？</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <span class="faq-icon a">A</span>
+          <span>もちろんご参加いただけます。業務改善やAI活用に関心のある経営者・担当者の方であれば、どなたでも大歓迎です！</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- INFO -->
 <section class="info">
@@ -661,6 +803,12 @@
 </footer>
 
 <script>
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
   const revealEls = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
