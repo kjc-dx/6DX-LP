@@ -16,16 +16,16 @@
     --dark: #1A1240;
     --white: #FFFFFF;
   }
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
   body {
     font-family: "Zen Maru Gothic", sans-serif;
     background: #F0F4FF;
     color: var(--dark);
     overflow-x: hidden;
   }
-
+ 
   /* HERO */
   .hero {
     background: var(--dark);
@@ -211,7 +211,7 @@
     animation: bounce 1.5s ease infinite;
   }
   @keyframes bounce { 0%,100%{transform:rotate(45deg) translateY(0)} 50%{transform:rotate(45deg) translateY(5px)} }
-
+ 
   /* SECTIONS */
   section { padding: 80px 20px; }
   .container { max-width: 860px; margin: 0 auto; }
@@ -231,7 +231,7 @@
     line-height: 1.3;
     margin-bottom: 16px;
   }
-
+ 
   /* ABOUT */
   .about { background: #fff; position: relative; overflow: hidden; }
   .about::before {
@@ -255,7 +255,7 @@
     padding: 0 4px;
     font-weight: 900;
   }
-
+ 
   /* WORKS */
   .works { background: #F8F0FF; }
   .works .section-label { background: #EDE0FF; color: var(--purple); }
@@ -291,7 +291,7 @@
   .work-emoji { font-size: 3rem; margin-bottom: 12px; display: block; }
   .work-title { font-weight: 900; font-size: 1.15rem; margin-bottom: 10px; line-height: 1.4; }
   .work-desc { font-size: 0.9rem; color: #666; line-height: 1.7; }
-
+ 
   /* INFO */
   .info { background: #fff; }
   .info .section-label { background: #FFF0F5; color: var(--pink); }
@@ -325,7 +325,7 @@
   .info-card .label { font-size: 0.75rem; font-weight: 700; color: #999; margin-bottom: 4px; letter-spacing: 0.05em; }
   .info-card .value { font-weight: 700; font-size: 0.95rem; line-height: 1.6; }
   .info-card.deadline .value { color: var(--pink); font-size: 1.1rem; }
-
+ 
   /* MAP */
   .map-section { background: #F0F4FF; padding: 60px 20px; }
   .map-label {
@@ -359,7 +359,7 @@
     border: none;
     display: block;
   }
-
+ 
   /* CTA */
   .cta-section {
     background: linear-gradient(135deg, #1A1240 0%, #2D1B69 50%, #1A1240 100%);
@@ -423,14 +423,14 @@
   .big-cta .sub { display:block; font-size:0.75rem; font-weight:500; opacity:0.7; margin-top:3px; }
   .deadline-note { margin-top: 20px; color: rgba(255,255,255,0.6); font-size: 0.9rem; }
   .deadline-note strong { color: var(--yellow); }
-
+ 
   /* ORGANIZER */
-  .organizer { background: #F8F8FF; text-align: center; padding: 60px 20px; }
+  .organizer { background: #fff; text-align: center; padding: 60px 20px; }
   .organizer .section-label { background: #EEF0FF; color: #5566CC; }
   .organizer-logo { width: 130px; margin: 16px auto 20px; display: block; }
   .organizer-name { font-weight: 900; font-size: 1.3rem; margin-bottom: 10px; }
   .organizer-contact { color: #555; font-size: 0.95rem; line-height: 1.9; margin-bottom: 28px; }
-
+ 
   /* SOCIAL BUTTONS */
   .social-links {
     display: flex;
@@ -456,7 +456,7 @@
     color: #fff;
   }
   .social-btn.website { background: var(--dark); color: #fff; }
-
+ 
   /* FOOTER */
   footer {
     background: var(--dark);
@@ -465,7 +465,7 @@
     padding: 24px 20px;
     font-size: 0.8rem;
   }
-
+ 
   /* ANIMATIONS */
   @keyframes fadeDown {
     from { opacity: 0; transform: translateY(-20px); }
@@ -480,13 +480,13 @@
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
-
+ 
   /* FAQ */
   .faq { background: #fff; }
   .faq .section-label { background: #FFF8E8; color: #CC8800; }
-
+ 
   .faq-list { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
-
+ 
   .faq-item {
     border-radius: 18px;
     overflow: hidden;
@@ -495,7 +495,7 @@
     transition: border-color 0.2s;
   }
   .faq-item:hover { border-color: var(--yellow); }
-
+ 
   .faq-q {
     width: 100%;
     display: flex;
@@ -514,7 +514,7 @@
   }
   .faq-q:hover { background: #FFF8E8; }
   .faq-q span:nth-child(2) { flex: 1; }
-
+ 
   .faq-icon {
     width: 32px; height: 32px;
     border-radius: 10px;
@@ -528,7 +528,7 @@
     flex-shrink: 0;
   }
   .faq-icon.a { background: linear-gradient(135deg, var(--cyan), var(--purple)); color: #fff; }
-
+ 
   .faq-arrow {
     font-size: 0.75rem;
     color: #AAA;
@@ -536,7 +536,7 @@
     flex-shrink: 0;
   }
   .faq-item.open .faq-arrow { transform: rotate(180deg); }
-
+ 
   .faq-a {
     display: none;
     gap: 14px;
@@ -549,11 +549,11 @@
     padding-top: 16px;
   }
   .faq-item.open .faq-a { display: flex; }
-
+ 
 </style>
 </head>
 <body>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -590,7 +590,7 @@
     <div class="arrow"></div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section class="about">
   <div class="container">
@@ -603,7 +603,7 @@
     </p>
   </div>
 </section>
-
+ 
 <!-- WORKS -->
 <section class="works">
   <div class="container">
@@ -631,14 +631,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FAQ -->
 <section class="faq">
   <div class="container">
     <span class="section-label">FAQ</span>
     <h2 class="section-title reveal">よくあるご質問</h2>
     <div class="faq-list">
-
+ 
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-icon">Q</span>
@@ -650,7 +650,7 @@
           <span>無料でご参加いただけます。お気軽にどうぞ！</span>
         </div>
       </div>
-
+ 
       <div class="faq-item reveal reveal-delay-1">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-icon">Q</span>
@@ -662,7 +662,7 @@
           <span>もちろんです！生成AIを「知る」から「使う」へをコンセプトにした入門向けイベントです。専門知識は一切不要です。</span>
         </div>
       </div>
-
+ 
       <div class="faq-item reveal reveal-delay-2">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-icon">Q</span>
@@ -674,7 +674,7 @@
           <span>パソコン・スマホをご持参ください。体験型のワークで実際に操作していただきます。</span>
         </div>
       </div>
-
+ 
       <div class="faq-item reveal reveal-delay-1">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-icon">Q</span>
@@ -686,7 +686,7 @@
           <span>会場に専用駐車場はございません。公共交通機関をご利用いただくか、近隣のコインパーキングをご利用ください。</span>
         </div>
       </div>
-
+ 
       <div class="faq-item reveal reveal-delay-2">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-icon">Q</span>
@@ -698,12 +698,12 @@
           <span>もちろんご参加いただけます。業務改善やAI活用に関心のある経営者・担当者の方であれば、どなたでも大歓迎です！</span>
         </div>
       </div>
-
+ 
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- INFO -->
 <section class="info">
   <div class="container">
@@ -741,7 +741,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- MAP -->
 <section class="map-section">
   <div class="container">
@@ -757,7 +757,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- CTA -->
 <section class="cta-section">
   <div class="blob cta-blob1"></div>
@@ -774,7 +774,7 @@
     <p class="deadline-note reveal">〆切：<strong>2026年6月7日（日）</strong>まで</p>
   </div>
 </section>
-
+ 
 <!-- ORGANIZER -->
 <section class="organizer">
   <div class="container">
@@ -796,19 +796,19 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <p>© 2026 公益社団法人鹿児島青年会議所 All Rights Reserved.</p>
 </footer>
-
+ 
 <script>
-
+ 
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     item.classList.toggle('open');
   }
-
+ 
   const revealEls = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
